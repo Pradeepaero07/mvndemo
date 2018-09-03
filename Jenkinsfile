@@ -22,7 +22,7 @@ pipeline{
 		stage('Deployment Stage'){
 			steps{
 				withMaven(maven: 'maven3.5.4'){
-					bat 'mvn deploy'
+					#bat 'mvn deploy'
 				}
 				echo 'Deployment completed'
 			}
