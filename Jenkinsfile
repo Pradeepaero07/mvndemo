@@ -5,7 +5,7 @@ pipeline{
 		stage('checkout'){
 		
 			steps{
-				bat 'git clone git@github.com:Pradeepaero07/mvndemo.git'
+				git 'https://github.com/Pradeepaero07/mvndemo.git'
 			}
 		}
 		stage('Compile Stage'){
