@@ -2,6 +2,12 @@ pipeline{
 	agent any
 	
 	stages{
+		stage('checkout'){
+		
+			steps{
+				bat 'git clone git@github.com:Pradeepaero07/mvndemo.git'
+			}
+		}
 		stage('Compile Stage'){
 		
 			steps{
