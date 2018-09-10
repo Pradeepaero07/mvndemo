@@ -8,7 +8,7 @@ pipeline{
 		
 			steps{
 				
-				git ${params.appRepoURL}
+				git "${params.appRepoURL}"
 			}
 			post{
 				success{
