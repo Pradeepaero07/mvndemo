@@ -1,14 +1,19 @@
 pipeline{
 	agent any
 	parameters {
-        string(defaultValue: "https://github.com/Pradeepaero07/mvndemo.git", description: 'This is the github url of application repo', name: 'app-repo-url')
+        string(defaultValue: "https://github.com/Pradeepaero07/mvndemo.git", description: 'This is the github url of application repo', name: 'appRepoURL')
     }
 	stages{
 		stage('checkout'){
 		
 			steps{
-				echo "app-repo url: ${params.app-repo-url}"
+				
 				git 'https://github.com/Pradeepaero07/mvndemo.git'
+			}
+			post{
+				success{
+					echo "app-repo url: ${params.appRepoURL}"	
+				}
 			}
 		}
 		stage('Compile Stage'){
