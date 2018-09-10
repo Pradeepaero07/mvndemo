@@ -1,7 +1,7 @@
 pipeline{
 	agent any
 	parameters {
-        stringParam('app-repo-url', 'https://github.com/Pradeepaero07/mvndemo.git', 'This is the github url of application repo')
+        string('app-repo-url', 'https://github.com/Pradeepaero07/mvndemo.git', 'This is the github url of application repo')
     }
 	stages{
 		stage('checkout'){
