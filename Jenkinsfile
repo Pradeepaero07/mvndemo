@@ -8,7 +8,7 @@ pipeline{
 		
 			steps{
 				
-				git 'https://github.com/Pradeepaero07/mvndemo.git'
+				git '${params.appRepoURL}'
 			}
 			post{
 				success{
