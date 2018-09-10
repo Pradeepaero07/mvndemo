@@ -4,7 +4,7 @@ pipeline{
         string(defaultValue: "https://github.com/Pradeepaero07/mvndemo.git", description: 'This is the github url of application repo', name: 'appRepoURL')
     }
 	stages{
-		stage('checkout'){
+		/*stage('checkout'){
 		
 			steps{
 				
@@ -15,7 +15,7 @@ pipeline{
 					echo "app-repo url: ${params.appRepoURL}"	
 				}
 			}
-		}
+		}*/
 		stage('Compile Stage'){
 		
 			steps{
