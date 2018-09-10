@@ -7,6 +7,7 @@ pipeline{
 		stage('checkout'){
 		
 			steps{
+				echo "app-repo url: ${params.app-repo-url}"
 				git 'https://github.com/Pradeepaero07/mvndemo.git'
 			}
 		}
