@@ -1,3 +1,13 @@
+/*import hudson.model.*
+
+
+Build build = Executor.currentExecutor().currentExecutable
+
+def maven_goal_param = "Maven_goal"
+
+def resolver = build.buildVariableResolver
+def maven_goal = resolver.resolve(maven_goal_param)*/
+
 pipeline{
 	agent any
 	parameters {
@@ -20,7 +30,7 @@ pipeline{
 		
 			steps{
 				withMaven(maven: 'maven3.5.4'){
-					bat 'mvn clean compile'
+					bat ${params.maven_goal}
 				}
 			}
 		}
