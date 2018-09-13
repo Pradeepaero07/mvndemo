@@ -30,7 +30,7 @@ pipeline{
 		
 			steps{
 				withMaven(maven: 'maven3.5.4'){
-					bat ${params.maven_goal}
+					bat "${params.maven_goal}"
 				}
 			}
 		}
